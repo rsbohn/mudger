@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: Copyright (c) 2021 Randall Bohn (dexter)
+# SPDX-License-Identifier: Unlicense
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
