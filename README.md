@@ -1,7 +1,7 @@
 # mudger
 A musical bodge? Build something musical in five parts. A Dexter Starboard project.
 
-Mudge is a sandy, desert-like area in the south-east corner of Oz. It's inhabitants have blue beards.
+Mudge is a sandy, desert-like area in the south-east corner of Oz. Its inhabitants have blue beards.
 In times before Ozma came to the throne, the Mudgers would often pillage and ransack neighboring communities in Munchkin Country.
 
 Modern Mudgers just want to make music. With CircuitPython I guess.
