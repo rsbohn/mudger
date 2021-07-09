@@ -11,13 +11,13 @@ from midi_player import MidiPlayer
 
 # thanks https://github.com/adafruit/Adafruit_Learning_System_Guides
 # /blob/f44f5f961ceb9dccb785c5843c22b12bcc1f7b5b/MIDI_Modal_Keyboard/code.py
-major = (0, 2, 4, 5, 7, 9, 11)
-minor = (0, 2, 3, 5, 7, 8, 10)
-dorian = (0, 2, 3, 5, 7, 9, 10)
-phrygian = (0, 1, 3, 5, 7, 8, 10)
-lydian = (0, 2, 4, 6, 7, 9, 11)
-mixolydian = (0, 2, 4, 5, 7, 9, 10)
-locrian = (0, 1, 3, 5, 6, 8, 10)
+major = (0, 2, 4, 5, 7, 9, 11, 12)
+minor = (0, 2, 3, 5, 7, 8, 10, 12)
+dorian = (0, 2, 3, 5, 7, 9, 10, 12)
+phrygian = (0, 1, 3, 5, 7, 8, 10, 12)
+lydian = (0, 2, 4, 6, 7, 9, 11, 12)
+mixolydian = (0, 2, 4, 5, 7, 9, 10, 12)
+locrian = (0, 1, 3, 5, 6, 8, 10, 12)
 
 player = MidiPlayer()
 player.riff = [60 + m for m in dorian]
