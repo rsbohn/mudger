@@ -58,7 +58,8 @@ class MidiPlayer:
             self.last_tick = now
             self.step += 1
             self.current_note = self.riff[self.step % len(self.riff)]
-            self.midi.send(NoteOn(self.current_note, self.velocity))
+            if self.current_note > 19:
+                self.midi.send(NoteOn(self.current_note, self.velocity))
         if not self.playing and self.current_note is not None:
             self.midi.send(NoteOff(self.current_note, 0))
             self.current_note = None
