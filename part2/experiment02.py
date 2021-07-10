@@ -21,6 +21,7 @@ locrian = (0, 1, 3, 5, 6, 8, 10, 12)
 
 player = MidiPlayer()
 player.riff = [60 + m for m in dorian]
+player.start()
 pixel = NeoPixel(board.NEOPIXEL, 1, brightness=0.3)
 lightshow = [0xFF0000, 0xCC0000, 0x990000, 0x660000, 0x330000, 0x000000]
 while True:

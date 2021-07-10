@@ -10,6 +10,7 @@ from midi_player import MidiPlayer
 
 
 player = MidiPlayer()
+player.start()
 while True:
     player.play(time.monotonic())
     time.sleep(0.01)
