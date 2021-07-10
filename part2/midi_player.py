@@ -3,7 +3,6 @@
 
 # copy to the CIRCUITPY drive as "midi_player.py"
 """MidiPlayer -- play MIDI notes"""
-import time
 import usb_midi
 
 # use `circup install adafruit_midi`
@@ -36,9 +35,7 @@ class MidiPlayer:
         """Start from step zero."""
         self.playing = True
         self.step = 0
-        self.last_tick = time.monotonic()
-        self.current_note = self.riff[0]
-        self.midi.send(NoteOn(self.current_note, self.velocity))
+        self.last_tick = 0
         return self
 
     def stop(self):
@@ -49,15 +46,15 @@ class MidiPlayer:
     def resume(self):
         """Continue at the next step."""
         self.playing = True
-        self.midi.send(NoteOn(self.riff[self.step % len(self.riff)], self.velocity))
+        self.last_tick = 0
         return self
 
     def play(self, now):
         """Play the next note after self.tick_time has elapsed."""
         if self.playing and self.tick_time <= now - self.last_tick:
             self.last_tick = now
-            self.step += 1
             self.current_note = self.riff[self.step % len(self.riff)]
+            self.step += 1
             if self.current_note > 19:
                 self.midi.send(NoteOn(self.current_note, self.velocity))
         if not self.playing and self.current_note is not None:
